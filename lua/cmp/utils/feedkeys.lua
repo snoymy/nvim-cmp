@@ -29,7 +29,7 @@ feedkeys.call = setmetatable({
 
     if is_insert then
       for i = #queue, 1, -1 do
-        vim.api.nvim_feedkeys(queue[i][1], queue[i][2] .. 'i', queue[i][3])
+        vim.api.nvim_feedkeys(queue[i][1], 'i', queue[i][3])
       end
     else
       for i = 1, #queue do

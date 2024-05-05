@@ -170,7 +170,7 @@ end
 ---Wait and callback for consuming next keymap.
 async.debounce_next_tick_by_keymap = function(callback)
   return function()
-    feedkeys.call('', '', callback)
+    feedkeys.call('', 'in', callback)
   end
 end
 
